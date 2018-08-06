@@ -25,7 +25,7 @@ function alustaSivu() {
                 var obj = JSON.parse(req.responseText);
                 tulostaJunienTiedot(obj);
             } else {
-                alert("Pyyntö epäonnistui");
+                console.log('Pyyntö epäonnistui');
             }
         }
     }
