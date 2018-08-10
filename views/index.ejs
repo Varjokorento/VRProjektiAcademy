@@ -1,0 +1,21 @@
+<%- include('header.ejs') %>
+
+
+<div class="container text-center">
+    <p> </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/VR_Group_logo.svg/800px-VR_Group_logo.svg.png" style="width: 40%; height: 35%;" alt="vr-logo">
+
+    <form method="post" action="/junat">
+      <input class="form-control" type="text" name="originCity" placeholder="Lähtökaupunki" required>
+        <p></p>
+      <input class="form-control" type="text" name="targetCity" placeholder="Kohdekaupunki" required>
+<p></p>
+            <input class="form-control col-md-3" type="text" name="howManyResults" placeholder="Hakutulosten määrä">
+
+      <div class="small">
+        <button class="nappula" type="submit">Submit</button>
+      </div>
+        <h1><%= error %></h1>
+
+        <%- include('footer.ejs') %>
+

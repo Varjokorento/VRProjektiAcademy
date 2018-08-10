@@ -1,0 +1,28 @@
+<%- include('header.ejs') %>
+
+<div class="container text-center">
+    <p> </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/VR_Group_logo.svg/800px-VR_Group_logo.svg.png" style="width: 40%; height: 35%;" alt="vr-logo">
+
+    <p></p>
+    <form method="post" action="/junat">
+        <input class="form-control" type="text" name="originCity" required>
+        <p></p>
+        <input class="form-control" type="text" name="targetCity" required>
+        <div class="small">
+            <button class="nappula" type="submit">Submit</button>
+        </div>
+    </form>
+
+<table class="table">
+    <% array.forEach(function(object){ %>
+    <tr>
+        <th>Departure Day</th>
+        <td><%=object.departureDate%></td>
+        <th> Departure Time </th>
+        <td><%=object.timeTableRows[0].scheduledTime%></td>
+    </tr>
+    <% }) %>
+</table>
+
+<%- include('footer.ejs') %>
